@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PureSound | Local Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Player View -->
+        <main id="player-view">
+            <div class="player-container">
+                <div class="album-art" id="album-art">
+                    <div class="music-icon">♪</div>
+                </div>
+
+                <div class="song-details">
+                    <h1 id="song-title">No Song Selected</h1>
+                    <p id="song-artist">Your Local Library</p>
+                </div>
+
+                <div class="progress-container">
+                    <span id="current-time">0:00</span>
+                    <input type="range" id="progress-bar" value="0" step="1" min="0">
+                    <span id="duration">0:00</span>
+                </div>
+
+                <div class="controls">
+                    <button id="prev-btn" class="ctrl-btn" title="Previous">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+                    </button>
+                    <button id="play-pause-btn" class="ctrl-btn play-btn" title="Play/Pause">
+                        <svg id="play-icon" viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </button>
+                    <button id="next-btn" class="ctrl-btn" title="Next">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6h2v12h-2z"/></svg>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Library View -->
+        <section id="library-view" class="hidden">
+            <div class="library-header">
+                <h2>My Library</h2>
+                <button id="close-library" class="icon-btn">✕</button>
+            </div>
+            <div id="song-list">
+                <!-- Songs injected here -->
+            </div>
+            <button id="add-song-btn" class="fab">+</button>
+            <input type="file" id="file-input" accept="audio/*" multiple class="hidden">
+        </section>
+
+        <!-- Navigation -->
+        <nav id="main-nav">
+            <button id="library-toggle-btn" class="nav-btn">Library</button>
+        </nav>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

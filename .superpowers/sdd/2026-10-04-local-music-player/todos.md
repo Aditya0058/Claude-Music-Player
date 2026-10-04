@@ -1,0 +1,5 @@
+- [ ] Task 1: Basic HTML Structure & Minimalist Shell
+- [ ] Task 2: IndexedDB Storage Layer (db.js)
+- [ ] Task 3: Audio Playback Engine (player.js)
+- [ ] Task 4: UI Interaction Layer (ui.js)
+- [ ] Task 5: Orchestration & Final Integration (main.js)
